@@ -1,7 +1,7 @@
 import nltk
 import json
 import os
-
+nltk.download('punkt')
 from nltk_module.nltk_ibm import *
 from models.ibm_model import *
 from flask import Flask, request, jsonify, render_template
