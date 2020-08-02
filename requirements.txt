@@ -2,3 +2,4 @@ nltk
 flask
 numpy
 pandas
+gunicorn==19.9.0
