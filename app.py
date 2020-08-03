@@ -5,10 +5,8 @@ nltk.download('punkt')
 from nltk_module.nltk_ibm import *
 from models.ibm_model import *
 from flask import Flask, request, jsonify, render_template
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 
 def app_check():
     print("Checking for dataset ...")
