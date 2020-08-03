@@ -5,9 +5,9 @@ nltk.download('punkt')
 from nltk_module.nltk_ibm import *
 from models.ibm_model import *
 from flask import Flask, request, jsonify, render_template
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+cors = CORS(app)
 def app_check():
     print("Checking for dataset ...")
     print("Searching for en_fr.json")
@@ -63,4 +63,4 @@ def index():
     return "<h1>DEMO NLTK</h1>"
 
 if __name__=="__main__":
-    app.run()
+    app.run(host='0.0.0.0')
